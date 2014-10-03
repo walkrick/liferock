@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+
+html {
+    font-family: Permanent Marker;
+}
+
+
+.button {
+    width: 500px;
+    height: 150px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #ffffff;
+    background: #ebeb00;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    color: white;
+}
+
+.text_decoration {
+    text-decoration: none;
+    color: #ec0080;
+    position: relative;
+    top: 30%;
+}
+
+div:hover{
+    background-color: black;
+}
+
