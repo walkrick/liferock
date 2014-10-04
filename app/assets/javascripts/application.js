@@ -15,7 +15,6 @@
 //= require turbolinks
 //= require_tree .
 
-  console.log('here');
 
 
   $('#dance').click(function () {
@@ -49,4 +48,4 @@
       $('#rock').css('top', 300 + 'px');
       $('#rock').css('left', 250 + 'px')
     }, 20000);
-  })
+  });
