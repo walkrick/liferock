@@ -57,7 +57,7 @@ h1 {
 }
 
 .background {
-  z-index: -1;
+  z-index: -5;
   width: 100%;
   position: absolute;
   top: 0;
@@ -88,3 +88,15 @@ button {
   transition: 5s;
 }
 
+#newspaper{
+  display: none;
+  margin-left: 15em;
+  margin-top: 15em;
+  z-index: 1;
+
+
+}
+
+#rock {
+  z-index: -1;
+}

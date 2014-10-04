@@ -19,6 +19,11 @@
   $(document).ready(function() {
     console.log($('img'));
 
+    $('#hide').click(function () {
+      console.log('here');
+      $('#newspaper').toggle();
+    })
+
     $('#dance').click(function () {
       console.log('here');
 
