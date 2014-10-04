@@ -15,63 +15,75 @@
 //= require turbolinks
 //= require_tree .
 
-  $(document).ready(function() {
-    var time = 5000;
-    var change = 100;
-    $('#dance').click(function () {
 
-      change = Math.floor((Math.random() * 500 ) + 10);
-      $('#rock').css('top', 400 + change + 'px');
-      $('#rock').css('left', 250 - change + 'px');
+$(document).ready(function () {
 
-      for (var i = 1; i < 4; i++) {
+  var time = 5000;
+  var change = 100;
 
-        time = 5000 * i;
 
-        window.setTimeout(function () {
-          change = Math.floor((Math.random() * 500 ) + 10);
+  $('#hide').click(function () {
+    console.log('here');
+    $('#newspaper').css('top', '350px');
 
-          console.log(change);
+    setTimeout(function() {$('#newspaper').css('top', '2000px');}, 5000)
+  })
 
-          $('#rock').css('top', 400 - change + 'px');
-          $('#rock').css('left', 250 + change + 'px');
+  $('#dance').click(function () {
 
-        }, time);
+    change = Math.floor((Math.random() * 500 ) + 10);
+    $('#rock').css('top', 400 + change + 'px');
+    $('#rock').css('left', 250 - change + 'px');
 
-      }
+    for (var i = 1; i < 4; i++) {
+
+      time = 5000 * i;
 
       window.setTimeout(function () {
+        change = Math.floor((Math.random() * 500 ) + 10);
 
-        console.log('here too');
-        $('#rock').css('top', 400 + 'px');
-        $('#rock').css('left', 250 + 'px')
-      }, 20000);
-    })
+        console.log(change);
+
+        $('#rock').css('top', 400 - change + 'px');
+        $('#rock').css('left', 250 + change + 'px');
+
+      }, time);
+
+    }
+
+    window.setTimeout(function () {
+
+      console.log('here too');
+      $('#rock').css('top', 400 + 'px');
+      $('#rock').css('left', 250 + 'px')
+    }, 20000);
+  })
 
 
-    $('#jump').click(function(){
-      $('.flaming-school-bus').fadeIn(1000);
+  $('#jump').click(function () {
+    $('.flaming-school-bus').fadeIn(1000);
 
-      $('#rock').css('top', '0px');
-      $('#rock').css('left', '650px');
+    $('#rock').css('top', '0px');
+    $('#rock').css('left', '650px');
 
-      setTimeout(function(){
+    setTimeout(function () {
       $('#rock').css('top', '450px');
       $('#rock').css('left', '1250px');
-      }, 5000);
+    }, 5000);
 
-      setTimeout(function(){
-        $('#rock').css('top', '0px');
-        $('#rock').css('left', '650px');
-      }, 10000);
+    setTimeout(function () {
+      $('#rock').css('top', '0px');
+      $('#rock').css('left', '650px');
+    }, 10000);
 
-      setTimeout(function(){
-        $('#rock').css('top', '400px');
-        $('#rock').css('left', '250px');
-      }, 15000);
+    setTimeout(function () {
+      $('#rock').css('top', '400px');
+      $('#rock').css('left', '250px');
+    }, 15000);
 
-      setTimeout(function(){
-        $('.flaming-school-bus').fadeOut(1000);
-      }, 19000);
-    });
+    setTimeout(function () {
+      $('.flaming-school-bus').fadeOut(1000);
+    }, 19000);
   });
+});
+
