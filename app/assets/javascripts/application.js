@@ -15,38 +15,41 @@
 //= require turbolinks
 //= require_tree .
 
-  console.log('here');
+  $(document).ready(function() {
+    console.log($('img'));
 
 
-  $('#dance').click(function () {
-    console.log('here');
+    $('#dance').click(function () {
+      console.log('here');
 
-    var change = 100;
-    $('#rock').css('top', 300 - change + 'px');
-    $('#rock').css('left', 250 - change + 'px');
+      var change = 100;
+      $('#rock').css('top', 300 - change + 'px');
+      $('#rock').css('left', 250 - change + 'px');
 
-    for (var i = 0; i < 3; i++) {
+      for (var i = 0; i < 3; i++) {
 
-      var time = 5000 * i;
+        var time = 5000 * i;
+
+        window.setTimeout(function () {
+          change = Math.floor((Math.random() * 100 ) + 10);
+
+          console.log(change);
+
+          $('#rock').css('top', 300 - change + 'px');
+          $('#rock').css('left', 250 + change + 'px');
+
+        }, time);
+
+      }
+
+      console.log('here');
 
       window.setTimeout(function () {
-        change = Math.floor((Math.random() * 100 ) + 10);
 
-        console.log(change);
+        console.log('here too');
+        $('#rock').css('top', 300 + 'px');
+        $('#rock').css('left', 250 + 'px')
+      }, 20000);
+    })
 
-        $('#rock').css('top', 300 - change + 'px');
-        $('#rock').css('left', 250 + change + 'px');
-
-      }, time);
-
-    }
-
-    console.log('here');
-
-    window.setTimeout(function () {
-
-      console.log('here too');
-      $('#rock').css('top', 300 + 'px');
-      $('#rock').css('left', 250 + 'px')
-    }, 20000);
-  })
+  });
